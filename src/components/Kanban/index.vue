@@ -5,7 +5,12 @@
     </div>
     <draggable
       :list="list"
-      v-bind="$attrs"
+      v-bind="{
+        animation: 0,
+        group: 'description',
+        disabled: true,
+        ghostClass: 'ghost'
+      }"
       class="board-column-content"
       :set-data="setData"
     >

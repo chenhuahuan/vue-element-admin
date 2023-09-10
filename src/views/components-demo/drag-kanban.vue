@@ -1,8 +1,8 @@
 <template>
   <div class="components-container board">
-    <Kanban :key="1" :list="list1" :group="group" class="kanban todo" header-text="Todo" />
-    <Kanban :key="2" :list="list2" :group="group" class="kanban working" header-text="Working" />
-    <Kanban :key="3" :list="list3" :group="group" class="kanban done" header-text="Done" />
+    <Kanban :key="1" :list="list1" :group="group" class="kanban todo" header-text="排队中..." />
+    <Kanban :key="2" :list="list2" :group="group" class="kanban working" header-text="运行中..." />
+    <Kanban :key="3" :list="list3" :group="group" class="kanban done" header-text="已完成" />
   </div>
 </template>
 <script>
@@ -23,9 +23,7 @@ export default {
         { name: 'Mission', id: 4 }
       ],
       list2: [
-        { name: 'Mission', id: 5 },
-        { name: 'Mission', id: 6 },
-        { name: 'Mission', id: 7 }
+        { name: 'Mission', id: 5 }
       ],
       list3: [
         { name: 'Mission', id: 8 },
@@ -38,7 +36,7 @@ export default {
 </script>
 <style lang="scss">
 .board {
-  width: 1000px;
+  width: 100%;
   margin-left: 20px;
   display: flex;
   justify-content: space-around;
@@ -53,12 +51,12 @@ export default {
   }
   &.working {
     .board-column-header {
-      background: #f9944a;
+      background: #d7d411;
     }
   }
   &.done {
     .board-column-header {
-      background: #2ac06d;
+      background: #7d7f7e;
     }
   }
 }
